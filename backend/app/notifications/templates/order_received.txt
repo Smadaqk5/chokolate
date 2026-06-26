@@ -1,0 +1,3 @@
+Thank you for your order {{ order_number }}!
+Please pay {{ total }} to Till {{ till_number }}.
+- {{ business_name }}

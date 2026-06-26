@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{font-family:Georgia,serif;color:#3d2314;background:#faf7f4;padding:40px;}.header{background:#3d2314;color:#d4af37;padding:20px;text-align:center;}.content{padding:30px;background:#fff;border:1px solid #e8ddd4;}</style></head>
+<body>
+<div class="header"><h1>{{ business_name }}</h1></div>
+<div class="content">
+<h2>Thank You for Your Order!</h2>
+<p>Dear {{ customer_name }},</p>
+<p>We have received your order <strong>{{ order_number }}</strong>.</p>
+<p>Total: <strong>{{ total }}</strong></p>
+<p>Please complete payment to Till Number: <strong>{{ till_number }}</strong></p>
+<p>With love,<br>{{ business_name }}</p>
+</div>
+</body>
+</html>

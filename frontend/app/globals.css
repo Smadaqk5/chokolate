@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf7f4;
+  --foreground: #3d2314;
+  --primary: #3d2314;
+  --accent: #d4af37;
+  --muted: #8b7355;
+  --card: #ffffff;
+  --border: #e8ddd4;
+}
+
+.dark {
+  --background: #1a1209;
+  --foreground: #f5f0eb;
+  --primary: #d4af37;
+  --accent: #d4af37;
+  --muted: #a89070;
+  --card: #2a1f14;
+  --border: #3d2e1f;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--primary)] text-white px-6 py-3 rounded-sm font-medium transition-all hover:opacity-90 disabled:opacity-50;
+  }
+  .btn-accent {
+    @apply bg-[var(--accent)] text-[var(--primary)] px-6 py-3 rounded-sm font-medium transition-all hover:opacity-90;
+  }
+  .btn-outline {
+    @apply border border-[var(--border)] px-6 py-3 rounded-sm font-medium transition-all hover:bg-[var(--card)];
+  }
+  .card {
+    @apply bg-[var(--card)] border border-[var(--border)] rounded-sm overflow-hidden;
+  }
+  .input {
+    @apply w-full px-4 py-3 border border-[var(--border)] rounded-sm bg-[var(--card)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] transition;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold text-center mb-2;
+  }
+  .section-subtitle {
+    @apply text-[var(--muted)] text-center mb-10 max-w-2xl mx-auto;
+  }
+}
